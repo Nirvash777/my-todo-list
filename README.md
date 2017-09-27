@@ -7,9 +7,9 @@ here you can add a list for your to do list
 
 -creates a list
 
-# To run 
+### To run 
 
-npm start
+$npm start
 
 
-Visit Localhost:3000
+Visit http://Localhost:3000/
