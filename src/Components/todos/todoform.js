@@ -7,13 +7,11 @@ class TodoForm extends Component {
       text: ''
     }
   }
-  addTodo() {
-    console.log('clicked')
-  }
+  
 
   updateText(event) {
-    console.log('updateText');
-    console.log(event.target.value);
+    //console.log('updateText');
+    //console.log(event.target.value);
     this.setState({
       text: event.target.value
     })
@@ -22,8 +20,9 @@ class TodoForm extends Component {
   render() {
     return (
       <div>
-          <input onChange={(event) => this.updateText(event)} value={this.state.text} placeholder="Add Todo" />
-          <button onClick={() => this.addTodo()}>Add Todo</button>
+          <input onChange={(event) => this.updateText(event)} 
+          value={this.state.text} placeholder="Add Todo" />
+          <button onClick={() => this.props.addNewTodofunc('this.state.text')}>Add Todo</button>
       </div>
     );
   }
